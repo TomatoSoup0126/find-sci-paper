@@ -4,7 +4,7 @@
   "version": "0.1",
   "description": "find sci paper by sci-hub",
   "icons": {
-    "128": "img/crow.png"
+    "128": "img/128.png"
   },
   "browser_action": {
     "default_icon": "img/crow.png",
