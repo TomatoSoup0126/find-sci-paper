@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
-  "name": "find sci paper",
-  "version": "0.1",
-  "description": "find sci paper by sci-hub",
+  "name": "Find sci paper",
+  "version": "0.2",
+  "description": "Find sci paper by sci-hub",
   "icons": {
     "128": "img/128.png"
   },
