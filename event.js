@@ -1,6 +1,16 @@
+let domainName = 'tw'
+
 function getPaper(query) {
-  var newUrl = "https://sci-hub.tw/" + query
-  chrome.tabs.create({ url: newUrl })
+  chrome.storage.sync.get({
+    coustomDomain: 'tw',
+  }, function (items) {
+    if (typeof items.coustomDomain !== 'undefined') {
+      domainName = items.coustomDomain
+    }
+   
+    let newUrl = `https://sci-hub.${domainName}/` + query
+    chrome.tabs.create({ url: newUrl })
+  })
 }
 
 

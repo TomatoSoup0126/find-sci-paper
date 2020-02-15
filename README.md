@@ -9,3 +9,7 @@ Find sci paper is a chrome extension for access sci-hub by one click.
 ### Use
 - Ｇo to referance page on journal site then click `Find sci paper` button at upper right corner, chrome will open a new tab to access referance resource on git-hub.
 - Or you can select doi text then `right click`>`get by dio`, then chrome will open a new tab to find resource in sci-hub.
+
+### Update
+#### v0.3
+- Add custom domain setting, change setting by `right click addon button` > `Options`
