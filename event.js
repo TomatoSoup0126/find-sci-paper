@@ -8,16 +8,14 @@ function getPaper(query) {
       domainName = items.coustomDomain
     }
    
-      let newUrl = `https://sci-hub.${domainName}/${query}`
+    let newUrl = `https://sci-hub.${domainName}/${query}`
     chrome.tabs.create({ url: newUrl })
   })
 }
 
-
 chrome.browserAction.onClicked.addListener(function (tab) {
   getPaper(tab.url)
 })
-
 
 chrome.contextMenus.create({
   type: 'normal',
