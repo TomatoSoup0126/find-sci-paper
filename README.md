@@ -14,4 +14,6 @@ Find sci paper is a chrome extension for access sci-hub by one click.
 #### v0.3
 - Add custom domain setting, change setting by `right click addon button` > `Options`
 
-<a href="https://www.buymeacoffee.com/tomatosoup" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+<a href="https://www.buymeacoffee.com/tomatosoup" target="_blank">
+  <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee"  width="217" height="60">
+</a>
