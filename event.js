@@ -1,28 +1,33 @@
 let domainName = 'se'
 
 function getPaper(query) {
-  chrome.storage.sync.get({
-    coustomDomain: 'se',
-  }, function (items) {
-    if (typeof items.coustomDomain !== 'undefined') {
-      domainName = items.coustomDomain
+  chrome.storage.sync.get(
+    { customDomain: 'se' },
+    (items) => {
+      if (typeof items.customDomain !== 'undefined') {
+        domainName = items.customDomain
+      }
+    
+      let newUrl = `https://sci-hub.${domainName}/${encodeURIComponent(query)}`
+      chrome.tabs.create({ url: newUrl })
     }
-   
-    let newUrl = `https://sci-hub.${domainName}/${query}`
-    chrome.tabs.create({ url: newUrl })
-  })
+  )
 }
 
-chrome.browserAction.onClicked.addListener(function (tab) {
+chrome.action.onClicked.addListener(function (tab) {
   getPaper(tab.url)
 })
 
-chrome.contextMenus.create({
-  type: 'normal',
-  title: 'get by doi: %s',
-  id: 'find sci paper',
-  contexts: ["selection"],
-  onclick: function (info,tab) {
-    getPaper(info.selectionText)
-  }
+chrome.contextMenus.onClicked.addListener(
+  (info) => getPaper(info.selectionText)
+)
+
+chrome.runtime.onInstalled.addListener(() => {
+  chrome.contextMenus.create(
+    {
+      id: 'find sci paper',
+      title: 'get by doi: %s',
+      contexts: ["selection"],
+    }
+  )
 })
