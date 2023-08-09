@@ -8,7 +8,7 @@ function getPaper(query) {
         domainName = items.customDomain
       }
     
-      let newUrl = `https://sci-hub.${domainName}/${encodeURIComponent(query)}`
+      let newUrl = `https://sci-hub.${domainName}/${query}`
       chrome.tabs.create({ url: newUrl })
     }
   )
