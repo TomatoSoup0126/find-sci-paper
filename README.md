@@ -11,6 +11,12 @@ Find sci paper is a chrome extension for access sci-hub by one click.
 - Or you can select doi text then `right click`>`get by dio`, then chrome will open a new tab to find resource in sci-hub.
 
 ### Update
+#### v0.5
+- Upgrade to manifest 3
+
+#### v0.4
+- Change default domain
+
 #### v0.3
 - Add custom domain setting, change setting by `right click addon button` > `Options`
 
